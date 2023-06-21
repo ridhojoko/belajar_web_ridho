@@ -9,3 +9,19 @@ function koneksi()
   $database = "web_semantik_a1";
   return mysqli_connect($server, $username, $password, $database);
 }
+
+function q($data)
+{
+  $koneksi = koneksi();
+  return mysqli_query($koneksi, $data);
+}
+
+function qs($data)
+{
+  return mysqli_fetch_assoc(q($data));
+}
+
+function prodi()
+{
+  return q("SELECT * FROM prodi");
+}
