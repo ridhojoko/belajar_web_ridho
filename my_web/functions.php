@@ -6,7 +6,7 @@ function koneksi()
   $server = "localhost";
   $username = "root";
   $password = "";
-  $database = "web_semantik_a1";
+  $database = "ppdb";
   return mysqli_connect($server, $username, $password, $database);
 }
 
